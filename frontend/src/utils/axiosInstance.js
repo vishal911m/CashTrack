@@ -1,6 +1,5 @@
 import axios from "axios";
-const { BASE_URL } = require("./apiPath");
-
+import { BASE_URL } from "./apiPath";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
