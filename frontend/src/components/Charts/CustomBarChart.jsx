@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
@@ -30,7 +29,7 @@ const CustomBarChart = ({data}) => {
         <BarChart data={data}>
           <CartesianGrid stroke='none' />
 
-          <XAxis dataKey="category" tick={{fontSize: 12, fill: "#555"}} stroke="none" />
+          <XAxis dataKey="month" tick={{fontSize: 12, fill: "#555"}} stroke="none" />
           <YAxis tick={{fontSize: 12, fill: "#555"}} stroke='none' />
 
           <Tooltip content={CustomTooltip} />

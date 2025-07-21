@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { prepareExpenseBarChartData } from '../../utils/helper';
-import CustomBarChart from '../../components/Charts/CustomBarChart';
+import CustomBarChart from '../Charts/CustomBarChart';
 
 const Last30DaysExpenses = ({data}) => {
   const [charData, setCharData] = useState([]);
@@ -8,7 +8,7 @@ const Last30DaysExpenses = ({data}) => {
 
   useEffect(()=>{
     const result = prepareExpenseBarChartData(data);
-    console.log('Processed Bar Chart Data:', result);
+    // console.log('Processed Bar Chart Data:', result);
     setCharData(result);
 
     return () =>{};
