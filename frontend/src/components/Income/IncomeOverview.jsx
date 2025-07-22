@@ -27,7 +27,7 @@ const IncomeOverview = ({transactions, onAddIncome}) => {
       </div>
 
       <div className='mt-10'>
-        <CustomBarChart data={chartData} />
+        <CustomBarChart data={chartData} labelKey="source" />
       </div>
     </div>
   )

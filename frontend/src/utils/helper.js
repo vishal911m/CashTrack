@@ -42,17 +42,28 @@ export const prepareExpenseBarChartData = (data = [])=>{
   return chartData;
 };
 
-export const prepareIncomeBarChartData = (data = [])=>{
-  const sortedData = [...data].sort((a,b)=> new Date(a.date) - new Date(b.date));
+export const prepareIncomeBarChartData = (data = []) => {
+  const sortedData = [...data].sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  const chartData = sortedData.map((item)=>({
-    month: moment(item?.date).format('Do MMM'),
-    amount: item?.amount,
-    source: item?.source,
-  }));
+  const monthCount = {};
+  
+  const chartData = sortedData.map((item) => {
+    const rawMonth = moment(item?.date).format('Do MMM');
 
-  console.log('prepareIncomeBarChartData input:', sortedData);
-  console.log('prepareIncomeBarChartData output:', chartData);
+    // Track how many times this month label has occurred
+    monthCount[rawMonth] = (monthCount[rawMonth] || 0) + 1;
 
+    // Add non-breaking spaces to make duplicate labels unique on X-axis
+    const uniqueMonth = rawMonth + '\u00A0'.repeat(monthCount[rawMonth] - 1);
+
+    return {
+      id: `${rawMonth} - ${item?.source}`, // Full ID for tooltip & internal use
+      month: uniqueMonth, // Displayed on X-axis, visually same
+      amount: item?.amount,
+      source: item?.source,
+    };
+  });
+
+  console.log('✅ Income chartData:', chartData);
   return chartData;
 };
