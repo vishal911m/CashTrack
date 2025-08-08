@@ -12,8 +12,8 @@ A full-stack expense tracker application for real-time expense tracking. Built w
 
 ## 🌐 Live Demo
 
-- **Frontend (Vercel)**: [https://monitr-livid.vercel.app/](https://monitr-livid.vercel.app/)
-- **Backend API (Render)**: [https://monitr-ayyp.onrender.com](https://monitr-ayyp.onrender.com)
+- **Frontend (Vercel)**: [https://cashtrack-vishal911m.vercel.app](https://cashtrack-vishal911m.vercel.app)
+- **Backend API (Render)**: [https://cashtrack-vishal911m.onrender.com](https://cashtrack-vishal911m.onrender.com)
 
 ---
 
