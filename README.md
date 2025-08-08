@@ -12,7 +12,7 @@ A full-stack expense tracker application for real-time expense tracking. Built w
 
 ## 🌐 Live Demo
 
-- **Frontend (Vercel)**: [https://cashtrack-vishal911m.vercel.app](https://cashtrack-vishal911m.vercel.app)
+- **Frontend (Vercel)**: [https://cashtrack-vishal911m.vercel.app/login](https://cashtrack-vishal911m.vercel.app/login)
 - **Backend API (Render)**: [https://cashtrack-vishal911m.onrender.com](https://cashtrack-vishal911m.onrender.com)
 
 ---
